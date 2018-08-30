@@ -1,0 +1,11 @@
+.Python
+bin/
+lib/
+include/
+terraform.tfstate*
+.terraform
+*.zip
+*.out
+.pytest_cache
+__pycache__
+*.pyc
