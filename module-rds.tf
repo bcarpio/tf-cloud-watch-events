@@ -25,5 +25,5 @@ PATTERN
 resource "aws_cloudwatch_event_target" "rds_sns" {
   rule      = "${aws_cloudwatch_event_rule.rds_events.name}"
   target_id = "SendToSNS"
-  arn       = "arn:aws:sns:us-east-1:619481567101:dev-use1-sns-raptor-01"
+  arn       = "${var.sns_topic_arn}"
 }
