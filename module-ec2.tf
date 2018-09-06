@@ -34,10 +34,6 @@ resource "aws_cloudwatch_event_rule" "ec2_events" {
       "AssociateAddress",
       "DisassociateAddress",
       "ReleaseAddress",
-      "AttachNetworkInterface",
-      "CreateNetworkInterface",
-      "DeleteNetworkInterface",
-      "DetachNetworkInterface",
       "UnassignIpv6Addresses",
       "UnassignPrivateIpAddresses"
     ]
