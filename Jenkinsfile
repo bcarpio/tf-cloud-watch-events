@@ -15,13 +15,19 @@ pipeline {
       }
     }
 
-  stage('Approve Terraform Plan') {
-    steps {
-      input 'Deploy to Staging?'
+    stage('Approve Terraform Plan') {
+      when {
+        branch "master"
+      }
+      steps {
+        input 'Deploy to Staging?'
+      }
     }
-  }
 
     stage('Terraform Apply') {
+      when {
+        branch "master"
+      }
       steps {
         sh 'terraform init && terraform apply "./terraform.out"'
       }
